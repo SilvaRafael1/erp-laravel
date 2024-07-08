@@ -3,8 +3,10 @@
 @section("content")
 
     <div class="container">
-        <h1>Gerenciar Categoria</h1>
         <div class="box">
+            <div id="title">
+                <h1>Gerenciar Categoria</h1>
+            </div>
             <div id="voltar">
                 <a href="{{ route('categories.index') }}">Voltar</a>
             </div>
@@ -15,16 +17,12 @@
                     <b>
                         Nome:</label>
                     </b>    
-                <br>
                 <input type="text" name="name" id="name" value="{{ $category->name }}">
-                <br>
                 <label for="description">
                     <b>
                         Descrição:</label>
                     </b>    
-                <br>
                 <input type="text" name="description" id="description" value="{{ $category->description }}">
-                <br>
                 <button type="submit" id="salvar">Salvar</button>
             </form>
         </div>

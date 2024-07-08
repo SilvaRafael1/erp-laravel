@@ -34,5 +34,5 @@ Route::prefix("products")->group(function () {
     Route::delete("delete/{id}", [ProductsController::class, "delete"])->name("products.delete");
     Route::get("{id}", [ProductsController::class, "edit"])->name("products.edit");
     Route::get("stock/{id}", [ProductsController::class, "editStock"])->name("products.editStock");
-    Route::post("", [ProductsController::class, "stock"])->name("products.stock");
+    Route::post("stock", [ProductsController::class, "stock"])->name("products.stock");
 });

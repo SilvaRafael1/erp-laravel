@@ -2,10 +2,19 @@
 @section("pageTitle", "Página Inicial")
 @section("content")
 
-<h1>Home</h1>
+<div class="container">
+  <div class="box">
+    <div id="title">
+      <h1>Página Inicial</h1>
+    </div>
 
-<a href="{{ route('brands.index') }}">Marcas</a>
-<br>
-<a href="{{ route('categories.index') }}">Categorias</a>
+    <div class="links">
+      <a href="{{ route('brands.index') }}">Marcas</a>
+      <a href="{{ route('categories.index') }}">Categorias</a>
+      <a href="{{ route('products.index') }}">Produtos</a>
+    </div>
+  </div>
+</div>
+
 
 @endsection
