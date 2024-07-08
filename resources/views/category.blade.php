@@ -10,6 +10,9 @@
             <div id="voltar">
                 <a href="{{ route('categories.index') }}">Voltar</a>
             </div>
+
+            @include("includes.errors")
+            
             <form action="{{ route('categories.store') }}" method="POST">
                 @csrf
                 <input type="hidden" name="id" id="id" value="{{ $category->id }}">

@@ -11,6 +11,8 @@
                 <a href="{{ route('brands.index') }}">Voltar</a>
             </div>
 
+            @include("includes.errors")
+
             <form action="{{ route('brands.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" id="id" value="{{ $brand->id }}">

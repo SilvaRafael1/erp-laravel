@@ -53,6 +53,18 @@ class ProductsController extends Controller
     }
 
     public function stock(Request $request) {
+        $validator = Validator::make($request->all(), [
+            "quantidade" => "required",
+            "attStock" => "required"
+        ], [
+            "quantidade.required" => "O campo quantidade deve ser preenchido",
+            "attStock.required" => "Deve ser selecionado uma ação a ser feita",
+        ]);
+
+        if($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
         $id = $request->input("id");
         $product = Product::find($id);
         $quantidade = $request->input("quantidade");

@@ -10,6 +10,9 @@
             <div id="voltar">
                 <a href="{{ route('products.index') }}">Voltar</a>
             </div>
+
+            @include("includes.errors")
+            
             <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="id" id="id" value="{{ $product->id }}">

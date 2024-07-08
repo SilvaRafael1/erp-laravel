@@ -8,6 +8,8 @@
     </div>
 
     <a href="{{ route('products.index') }}">Voltar</a>
+
+    @include("includes.errors")
     
     <div class="estoque">Estoque atual do produto <b>{{ $product->name }}: {{ $product->stock }}</b></div>
 

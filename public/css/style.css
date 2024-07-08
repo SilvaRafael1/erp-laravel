@@ -107,3 +107,16 @@ input, label, select, .radio {
 .estoque {
   margin: 12px 0 5px 0;
 }
+
+.errors {
+  padding: 7px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-top: 12px;
+}
+
+.errors p, .errors h3 {
+  margin: 3px;
+}
